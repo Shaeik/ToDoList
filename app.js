@@ -15,12 +15,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 mongoose.set("strictQuery", false);
 
-const url=require(__dirname+"/constants.js");
+const uri="mongodb+srv://shaik:TEST123@cluster0.rzikqk9.mongodb.net/todolistDB"
 // console.log(url.uri)
 // mongoose.connect(uri, () => {
 //   console.log("Connected to MongoDB");
 // });
-mongoose.connect(url.uri)
+mongoose.connect(uri)
 const itemsSchema = {
   name:String
 }
